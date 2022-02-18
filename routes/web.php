@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { 
     // dd(app());
     return view('welcome');
 });
 
 Route::get('/service-container-test', function(){
     app()->make('first_service_helper');
+});
+
+Route::get('/facadeTest', function(){
+    Sum::test();
 });
 
 Route::get('/dashboard', function () {
