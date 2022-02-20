@@ -26,6 +26,10 @@ Route::get('/facadeTest', function(){
     Sum::test();
 });
 
+Route::get('/user', function(){
+    return view('test');
+})->middleware('userCheck');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
